@@ -1,8 +1,4 @@
-from fastapi import FastAPI
+"""Backward-compatible entry point exposing the ASGI application."""
+from pqe.__main__ import app  # noqa: F401
 
-app = FastAPI()
-
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+__all__ = ["app"]
